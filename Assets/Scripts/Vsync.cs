@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Vsync : MonoBehaviour
 {
-    public int TargetFrameRate = 60;
-    void Update()
+    public int TragetFrameRate = 60;
+    void Awake()
     {
-        Application.targetFrameRate = TargetFrameRate;
-     
+#if UNITY_EDITOR
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = TragetFrameRate;
+#endif
     }
 }
+

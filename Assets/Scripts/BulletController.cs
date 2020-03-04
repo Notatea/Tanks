@@ -6,11 +6,12 @@ public class BulletController : MonoBehaviour
     public float Damage = 1.0f;
     private void OnCollisionEnter(Collision collision)
     {
+        collision.gameObject.GetComponent<Blinking>().GetsDamage = true;
+
+
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHPController>().HP -= Damage;
-            collision.gameObject.GetComponent<EnemyHPController>().GetsDamage = true;
-
             DestroyProperly();
         }
     }

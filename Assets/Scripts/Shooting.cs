@@ -30,9 +30,7 @@ public class Shooting : MonoBehaviour
             if (Input.GetMouseButton(0) && Time.time > nextFire)
             {
                 nextFire = Time.time + 1/FireRate;
-                Debug.Log("Shooted");
-
-
+  
                 GameObject bullet = Instantiate(projectile) as GameObject;
                 bullet.transform.position = transform.position + transform.forward * BulletOffset;
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();

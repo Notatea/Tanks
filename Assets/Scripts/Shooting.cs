@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     public float BulletOffset = 1.0f;
     public bool AutoFire;
     public float FireRate = 1f;
-    public float BulletLifeTime = 1.0f;
+    public float BulletLifeTime = 200.0f;
     float nextFire = 0.0F;
     void Start()
     {

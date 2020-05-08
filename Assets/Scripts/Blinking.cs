@@ -24,11 +24,6 @@ public class Blinking : MonoBehaviour
             GetsDamage = false;
         }
 
-        if (rend.material.color != Color.black)
-        {
-
-            Debug.Log("ColorChange2");
-        }
 
     }
 
@@ -43,6 +38,5 @@ public class Blinking : MonoBehaviour
     void Blink()
     {
         rend.material.color = DamageColor;
-        Debug.Log("ColorChange1");
     }
 }
